@@ -1,5 +1,5 @@
 @echo off
-cd /d "C:\Users\YourName\path\to\daily-commits"
+cd /d "C:\Users\anas\Desktop\daily-commits"
 git config user.name "aamt39239"
 git config user.email "aamt39239@gmail.com"
 git add .
