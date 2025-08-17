@@ -1,40 +1,16 @@
 @echo off
-REM تحديد مسار المستودع
 cd /d "%~dp0"
 
-REM تحديث المستودع
-git pull origin main
-
-REM إضافة ملف أو تعديل ملف بتاريخ اليوم (مثال: daily.txt)
+REM إضافة سطر جديد بوقت الكوميت
 echo Commit at %date% %time% >> daily.txt
 
-REM إضافة التغييرات
-git add .
+REM إضافة كل التغييرات
+git add daily.txt
 
-REM عمل commit مع رسالة بتاريخ ووقت
-git commit -m "Commit made automatically at %date% %time%"
+REM إنشاء كوميت برسالة واضحة
+git commit -m "Automatic commit at %date% %time%"
 
-REM رفع التغييرات
-git push origin main
-
-pause
-@echo off
-REM تحديد مسار المستودع
-cd /d "%~dp0"
-
-REM تحديث المستودع
-git pull origin main
-
-REM إضافة ملف أو تعديل ملف بتاريخ اليوم (مثال: daily.txt)
-echo Commit at %date% %time% >> daily.txt
-
-REM إضافة التغييرات
-git add .
-
-REM عمل commit مع رسالة بتاريخ ووقت
-git commit -m "Commit made automatically at %date% %time%"
-
-REM رفع التغييرات
+REM دفع التغييرات للفرع الرئيسي main
 git push origin main
 
 pause
